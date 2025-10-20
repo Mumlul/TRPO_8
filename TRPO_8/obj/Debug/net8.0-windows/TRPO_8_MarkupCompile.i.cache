@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\
+C:\Users\st310-11\Desktop\trpo_8\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\
 TRPO_8
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\ПК\source\repos\TRPO_8\TRPO_8\App.xaml
-21755149966
+C:\Users\st310-11\Desktop\trpo_8\TRPO_8\TRPO_8\App.xaml
+51205034267
 
-7-1870162332
-198-1431420039
-MainWindow.xaml;Pages\LoginPage.xaml;
+12-1825479042
+198-688555687
+MainWindow.xaml;Pages\AddPatient.xaml;Pages\LoginPage.xaml;Pages\MainPage.xaml;Pages\RegisterDoctor.xaml;
 
 True
 
