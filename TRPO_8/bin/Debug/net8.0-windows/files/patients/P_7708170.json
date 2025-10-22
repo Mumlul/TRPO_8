@@ -1,9 +1,9 @@
 {
   "ID": 7708170,
-  "FullName": "11 11 11",
-  "Name": "11",
-  "LastName": "11",
-  "MiddleName": "11",
+  "FullName": "11asd 11asd 11asd",
+  "Name": "11asd",
+  "LastName": "11asd",
+  "MiddleName": "11asd",
   "Birthday": "2025-03-12T00:00:00",
   "Receprions": [
     {
@@ -23,6 +23,12 @@
       "DoctorID": 99623,
       "Diagons": "11",
       "Recomendation": "11"
+    },
+    {
+      "Date": "2025-10-23T01:46:57.20259+05:00",
+      "DoctorID": 74901,
+      "Diagons": "123sda",
+      "Recomendation": "123sdada"
     }
   ]
 }

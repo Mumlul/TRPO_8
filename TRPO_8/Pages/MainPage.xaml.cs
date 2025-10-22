@@ -26,7 +26,7 @@ namespace TRPO_8.Pages
     public partial class MainPage : Page
     {
         public ObservableCollection<Patient> Patients { get; set; } = new();
-        public Patient SelectedPatient { get; set; }
+        public Patient? SelectedPatient { get; set; }
         private string patientspath = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\patients");
         
         private Doctor CurrentDoctor;
@@ -65,6 +65,10 @@ namespace TRPO_8.Pages
             NavigationService.Navigate(new AddPatient(Patients,SelectedPatient));
         }
 
-       
+
+        private void Change_data(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddPatient(Patients,SelectedPatient));
+        }
     }
 }

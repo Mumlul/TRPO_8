@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.ObjectModel;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Text.Json;
@@ -11,7 +12,7 @@ public partial class Reception : Page
     private Doctor _doctor;
     
     private string patientsPath = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\patients");
-
+    public ObservableCollection<Receprion> ReceptionsList { get; set; } = new();
     public Patient SelectedPatient
     {
         get=>_patient;
@@ -33,55 +34,38 @@ public partial class Reception : Page
         SelectedPatient = _selectedPatient;
         CurrentDoctor = _currentDoctor;
         DataContext = _selectedPatient;
+        LoadSpisok();
+        Spisok.DataContext = this;
+    }
+
+    private void LoadSpisok()
+    {
+        foreach (Receprion rec in SelectedPatient.Receprions)
+        {
+            ReceptionsList.Add(rec);
+        }
     }
 
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
     {
         try
         {
-            // Проверяем что пациент выбран
             if (SelectedPatient == null)
             {
                 MessageBox.Show("Ошибка: пациент не выбран!");
                 return;
             }
 
-            // Проверяем обязательные поля
-            if (string.IsNullOrWhiteSpace(Diagnos.Text))
-            {
-                MessageBox.Show("Введите диагноз!");
-                return;
-            }
-
             string filename = $"P_{SelectedPatient.ID}.json";
             string filePath = System.IO.Path.Combine(patientsPath, filename);
             
-            Patient patientToSave;
-
-            // Загружаем существующие данные или создаем новые
-            if (File.Exists(filePath))
-            {
-                string json = File.ReadAllText(filePath);
-                patientToSave = JsonSerializer.Deserialize<Patient>(json);
-                
-                // Обновляем базовые данные
-                patientToSave.LastName = SelectedPatient.LastName;
-                patientToSave.Name = SelectedPatient.Name;
-                patientToSave.MiddleName = SelectedPatient.MiddleName;
-                patientToSave.Birthday = SelectedPatient.Birthday;
-            }
-            else
-            {
-                patientToSave = SelectedPatient;
-            }
-
-            // Инициализируем список приемов если он null
+            Patient patientToSave=SelectedPatient;
+            
             if (patientToSave.Receprions == null)
             {
                 patientToSave.Receprions = new List<Receprion>();
             }
 
-            // ИСПРАВЛЕННЫЕ НАЗВАНИЯ СВОЙСТВ:
             patientToSave.Receprions.Add(new Receprion()
             {
                 Date = DateTime.Now,
@@ -90,7 +74,6 @@ public partial class Reception : Page
                 DoctorID = CurrentDoctor.ID
             });
 
-            // Сохраняем patientToSave, а не SelectedPatient
             string updatedJson = JsonSerializer.Serialize(patientToSave, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(filePath, updatedJson);
 

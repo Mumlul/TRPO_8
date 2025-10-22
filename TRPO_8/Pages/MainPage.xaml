@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="800"
       Title="MainPage"
-      Background="Aqua"
+      Background="#F8F8F8"
       >
 
     <Grid>
@@ -74,7 +74,8 @@
             </ListView>
         </Border>
         
-        <Button Grid.Row="2" Grid.ColumnSpan="3"  Content="Добавить нового пациента" Click="ButtonBase_OnClick" Margin="10"></Button>
+        <Button Grid.Row="2"   Content="Добавить нового пациента" Click="ButtonBase_OnClick" Margin="10"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="Изменить данные" Click="Change_data" Margin="10"/>
 
 
 

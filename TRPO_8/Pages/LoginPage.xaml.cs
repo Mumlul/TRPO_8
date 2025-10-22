@@ -27,7 +27,7 @@ namespace TRPO_8.Pages
         public LoginPage(Doctor? _currentDoctor=null)
         {
             InitializeComponent();
-            CurrentDoctor = _currentDoctor;
+            CurrentDoctor = _currentDoctor ?? new Doctor();
             this.DataContext = CurrentDoctor;
         }
 

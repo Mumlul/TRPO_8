@@ -24,6 +24,7 @@ namespace TRPO_8.Pages
     public partial class AddPatient : Page
     {
         private Patient newPatient;
+        private Patient oldPatient;
         private string path = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\patients");
         private ObservableCollection<Patient> _userList;
 
@@ -31,10 +32,10 @@ namespace TRPO_8.Pages
         public AddPatient(ObservableCollection<Patient> PatientList,Patient? selected=null)
         {
             InitializeComponent();
-            NewPatient = new Patient();
+            oldPatient=selected;
+            NewPatient = selected ?? new Patient();
             this.DataContext = NewPatient;
             _userList = PatientList;
-            NewPatient = selected;
         }
 
         public Patient NewPatient
@@ -46,32 +47,47 @@ namespace TRPO_8.Pages
             }
         }
         
-
         private void AddPatient_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                NewPatient.FullName = $"{NewPatient.LastName} {NewPatient.Name} {NewPatient.MiddleName}";
-                NewPatient.ID = GeneratePatientId();
-
-                string filename = $"P_{NewPatient.ID}.json";
-                string filePath = System.IO.Path.Combine(path, filename);
-
-                string json = JsonSerializer.Serialize(NewPatient, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(filePath, json);
-                MessageBox.Show($"Пациент добавлен! ID: {NewPatient.ID}");
-
-                var addedPatient = new Patient
+                string filename = null;
+                string filePath = null;
+                string json = null;
+                if (oldPatient == null)
                 {
-                    LastName = NewPatient.LastName,
-                    Name = NewPatient.Name,
-                    MiddleName = NewPatient.MiddleName,
-                    FullName = NewPatient.FullName,
-                    ID = NewPatient.ID,
-                    Birthday = NewPatient.Birthday
-                };
-                _userList.Add(addedPatient);
+                    NewPatient.FullName = $"{NewPatient.LastName} {NewPatient.Name} {NewPatient.MiddleName}";
+                    NewPatient.ID = GeneratePatientId();
+
+                    filename = $"P_{NewPatient.ID}.json";
+                    filePath = System.IO.Path.Combine(path, filename);
+
+                    json = JsonSerializer.Serialize(NewPatient, new JsonSerializerOptions { WriteIndented = true });
+                    File.WriteAllText(filePath, json);
+                    MessageBox.Show($"Пациент добавлен! ID: {NewPatient.ID}");
+
+                    var addedPatient = new Patient
+                    {
+                        LastName = NewPatient.LastName,
+                        Name = NewPatient.Name,
+                        MiddleName = NewPatient.MiddleName,
+                        FullName = NewPatient.FullName,
+                        ID = NewPatient.ID,
+                        Birthday = NewPatient.Birthday
+                    };
+                    _userList.Add(addedPatient);
+                    NavigationService.GoBack();
+                }
+                NewPatient.FullName = $"{NewPatient.LastName} {NewPatient.Name} {NewPatient.MiddleName}";
+                filename = $"P_{NewPatient.ID}.json";
+                filePath = System.IO.Path.Combine(path, filename);
+                json = JsonSerializer.Serialize(NewPatient, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(filePath, json);
+
+                _userList.FirstOrDefault(p => p.ID == oldPatient.ID);
+                MessageBox.Show("Данные пациента успешно обновлены!");
                 NavigationService.GoBack();
+               
             }
             catch (Exception ex)
             {
