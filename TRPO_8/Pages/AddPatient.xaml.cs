@@ -24,16 +24,17 @@ namespace TRPO_8.Pages
     public partial class AddPatient : Page
     {
         private Patient newPatient;
-        private string path = System.IO.Path.Combine(AppContext.BaseDirectory, "files");
+        private string path = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\patients");
         private ObservableCollection<Patient> _userList;
 
 
-        public AddPatient(ObservableCollection<Patient> PatientList)
+        public AddPatient(ObservableCollection<Patient> PatientList,Patient? selected=null)
         {
             InitializeComponent();
             NewPatient = new Patient();
             this.DataContext = NewPatient;
             _userList = PatientList;
+            NewPatient = selected;
         }
 
         public Patient NewPatient
@@ -44,6 +45,7 @@ namespace TRPO_8.Pages
                 newPatient = value;
             }
         }
+        
 
         private void AddPatient_Click(object sender, RoutedEventArgs e)
         {
@@ -59,8 +61,16 @@ namespace TRPO_8.Pages
                 File.WriteAllText(filePath, json);
                 MessageBox.Show($"Пациент добавлен! ID: {NewPatient.ID}");
 
-                NewPatient = new Patient();
-                _userList.Add(newPatient);
+                var addedPatient = new Patient
+                {
+                    LastName = NewPatient.LastName,
+                    Name = NewPatient.Name,
+                    MiddleName = NewPatient.MiddleName,
+                    FullName = NewPatient.FullName,
+                    ID = NewPatient.ID,
+                    Birthday = NewPatient.Birthday
+                };
+                _userList.Add(addedPatient);
                 NavigationService.GoBack();
             }
             catch (Exception ex)

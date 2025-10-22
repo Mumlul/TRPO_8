@@ -21,19 +21,19 @@
                 <StackPanel Grid.Row="1" MaxHeight="300">
                     <DockPanel Margin="0,5">
                         <TextBlock Text="Фамилия" Width="100" Margin="0,0,5,0"/>
-                        <TextBox Text="{Binding NewPatient.LastName}" Height="25"/>
+                        <TextBox Text="{Binding LastName,UpdateSourceTrigger=PropertyChanged}" Height="25"/>
                     </DockPanel>
                     <DockPanel Margin="0,5">
                         <TextBlock Text="Имя" Width="100" Margin="0,0,5,0"/>
-                        <TextBox Text="{Binding NewPatient.Name}" Height="25"/>
+                        <TextBox Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}" Height="25"/>
                     </DockPanel>
                     <DockPanel Margin="0,5">
                         <TextBlock Text="Отчество" Width="100" Margin="0,0,5,0"/>
-                        <TextBox Text="{Binding NewPatient.MiddleName}" Height="25"/>
+                        <TextBox Text="{Binding MiddleName,UpdateSourceTrigger=PropertyChanged}" Height="25"/>
                     </DockPanel>
                     <DockPanel Margin="0,5">
                         <TextBlock Text="Дата рождения" Width="100" Margin="0,0,5,0"/>
-                        <DatePicker SelectedDate="{Binding NewPatient.Birthday}" Height="25"/>
+                        <DatePicker SelectedDate="{Binding Birthday,UpdateSourceTrigger=PropertyChanged}" Height="25"/>
                     </DockPanel>
                     <Button Content="Добавить пациента" Click="AddPatient_Click" Margin="0,10,0,0" Height="30"/>
                 </StackPanel>

@@ -24,10 +24,10 @@ namespace TRPO_8.Pages
     {
         private string doctorpath = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\doctors");
         private Doctor currentDoctor;
-        public LoginPage()
+        public LoginPage(Doctor? _currentDoctor=null)
         {
             InitializeComponent();
-            CurrentDoctor = new Doctor();
+            CurrentDoctor = _currentDoctor;
             this.DataContext = CurrentDoctor;
         }
 
@@ -44,7 +44,7 @@ namespace TRPO_8.Pages
         {
             try
             {
-                string filename = $"D_{txtLoginId.Text}.json";
+                string filename = $"D_{CurrentDoctor.ID}.json";
                 string filePath = System.IO.Path.Combine(doctorpath, filename);
 
                 if (!File.Exists(filePath))
@@ -56,7 +56,7 @@ namespace TRPO_8.Pages
                 string json = File.ReadAllText(filePath);
                 currentDoctor = JsonSerializer.Deserialize<Doctor>(json);
 
-                if (currentDoctor.Password == txtLoginPassword.Text)
+                if (currentDoctor.Password == CurrentDoctor.Password)
                 {
                     MessageBox.Show("Авторизация успешна!");
                     NavigationService.Navigate(new MainPage(currentDoctor));
@@ -72,5 +72,9 @@ namespace TRPO_8.Pages
             }
         }
 
+        private void Register(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new RegisterDoctor());
+        }
     }
 }

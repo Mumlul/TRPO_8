@@ -1,0 +1,28 @@
+{
+  "ID": 7708170,
+  "FullName": "11 11 11",
+  "Name": "11",
+  "LastName": "11",
+  "MiddleName": "11",
+  "Birthday": "2025-03-12T00:00:00",
+  "Receprions": [
+    {
+      "Date": "2025-10-23T01:03:47.6928087+05:00",
+      "DoctorID": 99623,
+      "Diagons": "123",
+      "Recomendation": "123"
+    },
+    {
+      "Date": "2025-10-23T01:03:52.3273731+05:00",
+      "DoctorID": 99623,
+      "Diagons": "123",
+      "Recomendation": "123"
+    },
+    {
+      "Date": "2025-10-23T01:04:21.5304794+05:00",
+      "DoctorID": 99623,
+      "Diagons": "11",
+      "Recomendation": "11"
+    }
+  ]
+}

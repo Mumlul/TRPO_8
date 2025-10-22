@@ -49,3 +49,12 @@ C:\Users\st310-11\Desktop\trpo_8\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\Ad
 C:\Users\st310-11\Desktop\trpo_8\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\MainPage.g.cs
 C:\Users\st310-11\Desktop\trpo_8\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\AddPatient.baml
 C:\Users\st310-11\Desktop\trpo_8\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\MainPage.baml
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\AddPatient.g.cs
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\MainPage.g.cs
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\RegisterDoctor.g.cs
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\AddPatient.baml
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\MainPage.baml
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\RegisterDoctor.baml
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.sourcelink.json
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\Reception.g.cs
+C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\Reception.baml

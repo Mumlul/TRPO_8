@@ -23,7 +23,7 @@ namespace TRPO_8.Pages
     /// </summary>
     public partial class RegisterDoctor : Page
     {
-        private string path = System.IO.Path.Combine(AppContext.BaseDirectory, "files");
+        private string path = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\doctors");
         private Doctor currentDoctor;
 
         public RegisterDoctor()
@@ -54,9 +54,7 @@ namespace TRPO_8.Pages
                 File.WriteAllText(filePath, json);
                 MessageBox.Show($"Доктор зарегистрирован! ID: {CurrentDoctor.ID}");
 
-                CurrentDoctor = new Doctor();
-                UpdateSystemInfo();
-                NavigationService.Navigate(new LoginPage());
+                NavigationService.Navigate(new LoginPage(CurrentDoctor));
             }
             catch (Exception ex)
             {
@@ -80,20 +78,6 @@ namespace TRPO_8.Pages
             return id;
         }
 
-        private void UpdateSystemInfo()
-        {
-            /*if (!Directory.Exists(path))
-            {
-                SystemInfo.TotalFiles = 0;
-                SystemInfo.DoctorCount = 0;
-                SystemInfo.PatientCount = 0;
-                return;
-            }
-
-            var files = Directory.GetFiles(path, "*.json");
-            SystemInfo.TotalFiles = files.Length;
-            SystemInfo.DoctorCount = files.Count(f => Path.GetFileName(f).StartsWith("D_"));
-            SystemInfo.PatientCount = files.Count(f => Path.GetFileName(f).StartsWith("P_"));*/
-        }
+        
     }
 }

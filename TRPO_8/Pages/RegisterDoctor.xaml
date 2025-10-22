@@ -14,23 +14,23 @@
                 <TextBlock Text="Регистрация доктора" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
                 <DockPanel Margin="0,5">
                     <TextBlock Text="Фамилия" Width="100" Margin="0,0,5,0"/>
-                    <TextBox Text="{Binding CurrentDoctor.LastName}" Height="25"/>
+                    <TextBox Text="{Binding LastName}" Height="25"/>
                 </DockPanel>
                 <DockPanel Margin="0,5">
                     <TextBlock Text="Имя" Width="100" Margin="0,0,5,0"/>
-                    <TextBox Text="{Binding CurrentDoctor.FirstName}" Height="25"/>
+                    <TextBox Text="{Binding Name}" Height="25"/>
                 </DockPanel>
                 <DockPanel Margin="0,5">
                     <TextBlock Text="Отчество" Width="100" Margin="0,0,5,0"/>
-                    <TextBox Text="{Binding CurrentDoctor.MiddleName}" Height="25"/>
+                    <TextBox Text="{Binding MiddleName}" Height="25"/>
                 </DockPanel>
                 <DockPanel Margin="0,5">
                     <TextBlock Text="Специальность" Width="100" Margin="0,0,5,0"/>
-                    <TextBox Text="{Binding CurrentDoctor.Specialisation}" Height="25"/>
+                    <TextBox Text="{Binding Specialisation}" Height="25"/>
                 </DockPanel>
                 <DockPanel Margin="0,5">
                     <TextBlock Text="Пароль" Width="100" Margin="0,0,5,0"/>
-                    <TextBox Text="{Binding CurrentDoctor.Password}" Height="25"/>
+                    <TextBox Text="{Binding Password}" Height="25"/>
                 </DockPanel>
                 <Button Content="Сохранить доктора" Click="Add_Doctor" Margin="0,10,0,0" Height="30"/>
             </StackPanel>

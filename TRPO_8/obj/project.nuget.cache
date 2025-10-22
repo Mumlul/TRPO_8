@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Oa1E/KqD7zHAYMrnymA10f5nfabf8HIEuwiymtb5utlnmnmyyqhxDoOtTVJsKbLUBnKHX6l2pmps5nrdVlf33g==",
+  "dgSpecHash": "NHnCodbdVfI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\st310-11\\Desktop\\trpo_8\\TRPO_8\\TRPO_8\\TRPO_8.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\ПК\\source\\repos\\TRPO_8\\TRPO_8\\TRPO_8.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ПК\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\ПК\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\ПК\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\ПК\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.21\\microsoft.netcore.app.host.win-x64.8.0.21.nupkg.sha512"
+  ],
   "logs": []
 }

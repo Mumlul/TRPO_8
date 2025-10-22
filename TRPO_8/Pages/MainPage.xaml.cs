@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TRPO_8;
 
 namespace TRPO_8.Pages
 {
@@ -25,25 +26,45 @@ namespace TRPO_8.Pages
     public partial class MainPage : Page
     {
         public ObservableCollection<Patient> Patients { get; set; } = new();
+        public Patient SelectedPatient { get; set; }
         private string patientspath = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\patients");
-
+        
+        private Doctor CurrentDoctor;
         public MainPage(Doctor d)
         {
             InitializeComponent();
             LoadPatients();
             ll.DataContext = this;
             Info.DataContext = d;
+            CurrentDoctor = d;
+            Statistic.DataContext=new  Statistic();
         }
 
         private void LoadPatients()
         {
             foreach (string path in Directory.EnumerateFiles(patientspath))
             {
-
                 string json = File.ReadAllText(path);
                 Patient pat = JsonSerializer.Deserialize<Patient>(json);
                 Patients.Add(pat);
             }
         }
+
+        private void Add_Reception(object sender, MouseButtonEventArgs e)
+        {
+            if (SelectedPatient == null)
+            {
+                MessageBox.Show("sdad");
+                return;
+            }
+            NavigationService.Navigate(new Reception(SelectedPatient,CurrentDoctor));
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddPatient(Patients,SelectedPatient));
+        }
+
+       
     }
 }
