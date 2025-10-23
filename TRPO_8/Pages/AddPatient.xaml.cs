@@ -51,9 +51,9 @@ namespace TRPO_8.Pages
         {
             try
             {
-                string filename = null;
-                string filePath = null;
-                string json = null;
+                string filename = "";
+                string filePath = "";
+                string json = "";
                 if (oldPatient == null)
                 {
                     NewPatient.FullName = $"{NewPatient.LastName} {NewPatient.Name} {NewPatient.MiddleName}";
@@ -73,20 +73,25 @@ namespace TRPO_8.Pages
                         MiddleName = NewPatient.MiddleName,
                         FullName = NewPatient.FullName,
                         ID = NewPatient.ID,
-                        Birthday = NewPatient.Birthday
+                        Birthday = NewPatient.Birthday,
+                        Receprions = new List<Receprion>()
                     };
                     _userList.Add(addedPatient);
                     NavigationService.GoBack();
                 }
-                NewPatient.FullName = $"{NewPatient.LastName} {NewPatient.Name} {NewPatient.MiddleName}";
-                filename = $"P_{NewPatient.ID}.json";
-                filePath = System.IO.Path.Combine(path, filename);
-                json = JsonSerializer.Serialize(NewPatient, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(filePath, json);
+                else
+                {
+                    NewPatient.FullName = $"{NewPatient.LastName} {NewPatient.Name} {NewPatient.MiddleName}";
+                    filename = $"P_{NewPatient.ID}.json";
+                    filePath = System.IO.Path.Combine(path, filename);
+                    json = JsonSerializer.Serialize(NewPatient, new JsonSerializerOptions { WriteIndented = true });
+                    File.WriteAllText(filePath, json);
 
-                _userList.FirstOrDefault(p => p.ID == oldPatient.ID);
-                MessageBox.Show("Данные пациента успешно обновлены!");
-                NavigationService.GoBack();
+                    _userList.FirstOrDefault(p => p.ID == oldPatient.ID);
+                    MessageBox.Show("Данные пациента успешно обновлены!");
+                    NavigationService.GoBack();
+                }
+                    
                
             }
             catch (Exception ex)

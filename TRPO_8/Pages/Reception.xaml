@@ -14,22 +14,27 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Row="0" Text="Прием" FontWeight="Bold" 
-                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                <StackPanel Name="data"  Grid.Row="0">
+                    <TextBlock  Text="Прием" FontWeight="Bold" 
+                        HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <TextBlock  Text="{Binding ID}"/>
+                </StackPanel>
+                
+                
 
                 <StackPanel Grid.Row="1" MaxHeight="400">
 
                     <DockPanel Margin="0,5">
                         <TextBlock Text="Фамилия" Width="120" Margin="0,0,5,0"/>
-                        <TextBox Text="{Binding LastName}" Height="25"/>
+                        <TextBlock Text="{Binding LastName}" MouseDown="Edit_patient" Height="25"/>
                     </DockPanel>
                     <DockPanel Margin="0,5">
                         <TextBlock Text="Имя" Width="120" Margin="0,0,5,0"/>
-                        <TextBox Text="{Binding Name}" Height="25"/>
+                        <TextBlock Text="{Binding Name}" Height="25"/>
                     </DockPanel>
                     <DockPanel Margin="0,5">
                         <TextBlock Text="Отчество" Width="120" Margin="0,0,5,0"/>
-                        <TextBox Text="{Binding MiddleName}" Height="25"/>
+                        <TextBlock Text="{Binding MiddleName}" Height="25"/>
                     </DockPanel>
                     <DockPanel Margin="0,5">
                         <TextBlock Text="Дата рождения" Width="120" Margin="0,0,5,0"/>
@@ -72,9 +77,8 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    
-                    <Button Content="Добавить прием" Click="ButtonBase_OnClick"/>
 
+                    <Button Content="Добавить прием" Click="ButtonBase_OnClick"/>
                 </StackPanel>
             </Grid>
         </Border>

@@ -13,6 +13,7 @@ public partial class Reception : Page
     
     private string patientsPath = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\patients");
     public ObservableCollection<Receprion> ReceptionsList { get; set; } = new();
+    public ObservableCollection<Patient> _userList;
     public Patient SelectedPatient
     {
         get=>_patient;
@@ -28,7 +29,7 @@ public partial class Reception : Page
         set=>_doctor = value;
     }
 
-    public Reception(Patient _selectedPatient,Doctor _currentDoctor)
+    public Reception(Patient _selectedPatient,Doctor _currentDoctor, ObservableCollection<Patient>? userList=null)
     {
         InitializeComponent();
         SelectedPatient = _selectedPatient;
@@ -36,6 +37,8 @@ public partial class Reception : Page
         DataContext = _selectedPatient;
         LoadSpisok();
         Spisok.DataContext = this;
+        _userList = userList;
+        data.DataContext = _currentDoctor;
     }
 
     private void LoadSpisok()
@@ -84,5 +87,10 @@ public partial class Reception : Page
         {
             MessageBox.Show($"Ошибка при сохранении: {ex.Message}\n\nПодробности: {ex.InnerException?.Message}");
         }
+    }
+
+    public void Edit_patient(object sender,RoutedEventArgs e)
+    {
+        NavigationService.Navigate(new AddPatient(_userList,SelectedPatient));
     }
 }

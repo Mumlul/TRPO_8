@@ -26,6 +26,7 @@ namespace TRPO_8.Pages
     public partial class MainPage : Page
     {
         public ObservableCollection<Patient> Patients { get; set; } = new();
+        public Statistic Statistics { get; set; } = new Statistic();
         public Patient? SelectedPatient { get; set; }
         private string patientspath = System.IO.Path.Combine(AppContext.BaseDirectory, @"files\patients");
         
@@ -37,7 +38,7 @@ namespace TRPO_8.Pages
             ll.DataContext = this;
             Info.DataContext = d;
             CurrentDoctor = d;
-            Statistic.DataContext=new  Statistic();
+            Statistic.DataContext = Statistics;
         }
 
         private void LoadPatients()
@@ -48,6 +49,7 @@ namespace TRPO_8.Pages
                 Patient pat = JsonSerializer.Deserialize<Patient>(json);
                 Patients.Add(pat);
             }
+            Statistics.Update();
         }
 
         private void Add_Reception(object sender, MouseButtonEventArgs e)
@@ -57,18 +59,21 @@ namespace TRPO_8.Pages
                 MessageBox.Show("sdad");
                 return;
             }
-            NavigationService.Navigate(new Reception(SelectedPatient,CurrentDoctor));
+            NavigationService.Navigate(new Reception(SelectedPatient,CurrentDoctor,Patients));
+            Statistics.Update();
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddPatient(Patients,SelectedPatient));
+            NavigationService.Navigate(new AddPatient(Patients,null));
+            Statistics.Update();
         }
 
 
         private void Change_data(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AddPatient(Patients,SelectedPatient));
+            Statistics.Update();
         }
     }
 }

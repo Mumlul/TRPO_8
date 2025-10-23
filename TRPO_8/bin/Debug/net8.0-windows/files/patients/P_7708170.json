@@ -1,34 +1,94 @@
 {
   "ID": 7708170,
-  "FullName": "11asd 11asd 11asd",
-  "Name": "11asd",
-  "LastName": "11asd",
-  "MiddleName": "11asd",
+  "FullName": "1111 1111 1111",
+  "Name": "1111",
+  "LastName": "1111",
+  "MiddleName": "1111",
   "Birthday": "2025-03-12T00:00:00",
   "Receprions": [
     {
       "Date": "2025-10-23T01:03:47.6928087+05:00",
       "DoctorID": 99623,
       "Diagons": "123",
-      "Recomendation": "123"
+      "Recomendation": "123",
+      "DocotrFIO": null
     },
     {
       "Date": "2025-10-23T01:03:52.3273731+05:00",
       "DoctorID": 99623,
       "Diagons": "123",
-      "Recomendation": "123"
+      "Recomendation": "123",
+      "DocotrFIO": null
     },
     {
       "Date": "2025-10-23T01:04:21.5304794+05:00",
       "DoctorID": 99623,
       "Diagons": "11",
-      "Recomendation": "11"
+      "Recomendation": "11",
+      "DocotrFIO": null
     },
     {
       "Date": "2025-10-23T01:46:57.20259+05:00",
       "DoctorID": 74901,
       "Diagons": "123sda",
-      "Recomendation": "123sdada"
+      "Recomendation": "123sdada",
+      "DocotrFIO": null
+    },
+    {
+      "Date": "2025-10-23T08:18:55.6108426+05:00",
+      "DoctorID": 74901,
+      "Diagons": "hgadskjhgsd",
+      "Recomendation": "sadasdadad",
+      "DocotrFIO": null
+    },
+    {
+      "Date": "2025-10-23T08:40:20.4325387+05:00",
+      "DoctorID": 48139,
+      "Diagons": "dafsasdas",
+      "Recomendation": "asasdsadas",
+      "DocotrFIO": "\u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430"
+    },
+    {
+      "Date": "2025-10-23T08:41:13.2246869+05:00",
+      "DoctorID": 73073,
+      "Diagons": "dsadas",
+      "Recomendation": "asasdadad",
+      "DocotrFIO": "pr"
+    },
+    {
+      "Date": "2025-10-23T08:55:07.7307389+05:00",
+      "DoctorID": 74901,
+      "Diagons": "asdas",
+      "Recomendation": "asdasd",
+      "DocotrFIO": "123"
+    },
+    {
+      "Date": "2025-10-23T08:55:46.1461645+05:00",
+      "DoctorID": 74901,
+      "Diagons": "",
+      "Recomendation": "",
+      "DocotrFIO": "123"
+    },
+    {
+      "Date": "2025-10-23T08:59:45.9304684+05:00",
+      "DoctorID": 74901,
+      "Diagons": "sdasd",
+      "Recomendation": "asdadasd",
+      "DocotrFIO": "123"
+    },
+    {
+      "Date": "2025-10-23T08:59:55.9704531+05:00",
+      "DoctorID": 74901,
+      "Diagons": "123",
+      "Recomendation": "123",
+      "DocotrFIO": "123"
+    },
+    {
+      "Date": "2025-10-23T09:03:03.4266376+05:00",
+      "DoctorID": 74901,
+      "Diagons": "adsadas",
+      "Recomendation": "asda",
+      "DocotrFIO": "123"
     }
   ]
 }

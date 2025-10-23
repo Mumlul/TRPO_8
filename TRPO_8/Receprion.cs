@@ -53,7 +53,10 @@ public class Receprion: INotifyPropertyChanged
         }
     }
 
+
     public event PropertyChangedEventHandler? PropertyChanged;
+
+    
 
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {

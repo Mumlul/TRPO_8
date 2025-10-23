@@ -59,6 +59,27 @@ public class Statistic:INotifyPropertyChanged
         var files = Directory.GetFiles(@"files\doctors", "*.json");
         CountDoctors = files.Count(f => Path.GetFileName(f).StartsWith("D_"));
     }
+
+    public void Update()
+    {
+        if (!Directory.Exists(@"files\patients"))
+        {
+
+            CountPatients = 0;
+            return;
+        }
+        var files = Directory.GetFiles(@"files\patients", "*.json");
+        CountPatients = files.Count(f => Path.GetFileName(f).StartsWith("P_"));
+
+        if (!Directory.Exists(@"files\doctors"))
+        {
+
+            CountDoctors = 0;
+            return;
+        }
+        var files2 = Directory.GetFiles(@"files\doctors", "*.json");
+        CountDoctors = files2.Count(f => Path.GetFileName(f).StartsWith("D_"));
+    }
     
     
     

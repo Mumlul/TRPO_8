@@ -1,0 +1,24 @@
+{
+  "ID": 6085671,
+  "FullName": "adsad asdas asdasda",
+  "Name": "asdas",
+  "LastName": "adsad",
+  "MiddleName": "asdasda",
+  "Birthday": "2025-10-23T09:34:58.492755+05:00",
+  "Receprions": [
+    {
+      "Date": "2025-10-23T09:35:09.52988+05:00",
+      "DoctorID": 74901,
+      "Diagons": "sdadas",
+      "Recomendation": "asdasdas",
+      "DocotrFIO": "123"
+    },
+    {
+      "Date": "2025-10-23T09:35:14.2975349+05:00",
+      "DoctorID": 74901,
+      "Diagons": "12312",
+      "Recomendation": "dasdasd",
+      "DocotrFIO": "123"
+    }
+  ]
+}

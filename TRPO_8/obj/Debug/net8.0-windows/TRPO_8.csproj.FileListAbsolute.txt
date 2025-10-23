@@ -58,3 +58,34 @@ C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\Register
 C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.sourcelink.json
 C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\Reception.g.cs
 C:\Users\ПК\source\repos\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\Reception.baml
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\bin\Debug\net8.0-windows\TRPO_8.exe
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\bin\Debug\net8.0-windows\TRPO_8.deps.json
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\bin\Debug\net8.0-windows\TRPO_8.runtimeconfig.json
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\bin\Debug\net8.0-windows\TRPO_8.dll
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\bin\Debug\net8.0-windows\TRPO_8.pdb
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\AddPatient.g.cs
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\LoginPage.g.cs
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\MainPage.g.cs
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\Reception.g.cs
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\RegisterDoctor.g.cs
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8_MarkupCompile.cache
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8_MarkupCompile.lref
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\AddPatient.baml
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\LoginPage.baml
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\MainPage.baml
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\Reception.baml
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\Pages\RegisterDoctor.baml
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.g.resources
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.AssemblyInfoInputs.cache
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.AssemblyInfo.cs
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.csproj.CoreCompileInputs.cache
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.sourcelink.json
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.dll
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\refint\TRPO_8.dll
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.pdb
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\TRPO_8.genruntimeconfig.cache
+C:\Users\st310-07\Desktop\Новая папка\TRPO_8\TRPO_8\obj\Debug\net8.0-windows\ref\TRPO_8.dll
